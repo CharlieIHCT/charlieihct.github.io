@@ -29,9 +29,9 @@ nav a, nav a:hover, nav a:focus, nav a:active, nav a:link, nav a:visited {
 
 nav .author-icon {
     font-size: 20px;
-    width: 50px;
+    width: 50px!important;
     line-height: 48px;
-    padding-right: 10px;
+    padding-right: 10px!important;
     color: var(--black-2)!important;
 }
 

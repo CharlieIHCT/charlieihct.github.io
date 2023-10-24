@@ -35,7 +35,8 @@ nav .author-icon {
     color: var(--black-2)!important;
 }
 
-nav .title {
+    nav .title {
+    margin-bottom: 4.5px;
     vertical-align: text-bottom;
     font-size: 27px;
     font-weight: 500;

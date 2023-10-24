@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>我架設了一個Blog。</title>
-    <url>/2023/10/14/%E7%B6%B2%E7%AB%99%E7%9A%84%E8%B5%B7%E6%BA%90/</url>
-    <content><![CDATA[<h3 id="創造這個網站的原因？"><a href="#創造這個網站的原因？" class="headerlink" title="創造這個網站的原因？"></a>創造這個網站的原因？</h3><p>你好，歡迎來到這個網站的起源，這是這個網站的第一篇文章<br>原本想創這個網站是為了放自己刷leetcode心得，順便練習html,css,js</p>
-<h3 id="從bootstrap到hexo"><a href="#從bootstrap到hexo" class="headerlink" title="從bootstrap到hexo"></a>從bootstrap到hexo</h3><p>於是乎，我就馬上找了個bootstrap範本開始研究，稍微改了一點東西就丟到github pages了<br>然後我就發現這樣要寫文章真的超麻煩啊!!<br>要手動去github新增新的html不說，當文章多起來的時候，重要標籤、搜尋功能都不存在，這樣到底怎麼找文章啦😭<br>於是我就開始另闢蹊徑，最終決定使用hexo來架起我的Blog</p>
-<h3 id="架好了，在此留下我的喜悅！"><a href="#架好了，在此留下我的喜悅！" class="headerlink" title="架好了，在此留下我的喜悅！"></a>架好了，在此留下我的喜悅！</h3><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;^_^ Say hello to my little friend!&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="最後想說的話"><a href="#最後想說的話" class="headerlink" title="最後想說的話"></a>最後想說的話</h3><p>距離高三還有一年，我想這段時間還是能夠在這裡挺活躍的，不過當然同時也要準備好課業喔各位，不要像我一樣整天亂亂搞！<br>感謝聽我廢話到這邊~<br>希望以後也能常常相見！</p>
-<p>更瞭解我: <a href="https://google.com/">About Me</a></p>
-]]></content>
-      <categories>
-        <category>閒聊</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Markdown全語法</title>
     <url>/2023/10/21/markdown%20syntax/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="甚麼是MarkDown"><a href="#甚麼是MarkDown" class="headerlink" title="甚麼是MarkDown?"></a>甚麼是MarkDown?</h3><p>Markdown是一種輕量級標記語言，目標很簡單，就是實現「易讀易寫」。並在不需要特殊複雜排版的情況下就能輕鬆地將內容轉換為HTML或其他格式。</p>
 <h3 id="為甚麼你該學Markdown"><a href="#為甚麼你該學Markdown" class="headerlink" title="為甚麼你該學Markdown?"></a>為甚麼你該學Markdown?</h3><p>Markdown文本在原始形式下很容易閱讀，就像一般的記事本一樣，頂多就是多了一些明顯的符號(例如星號**用於標記強調文字)。</p>
 <p>最重要的是許多平台都已經可以使用Markdown語法來撰寫留言、文件了，例如Github、Stack Overflow、甚至是Discord、Youtube、Line等等通訊、娛樂軟體都或多或少的支援Markdown。</p>
 <p><strong>簡單的說，Markdown已經是我們在大數位時代中的一個不可或缺的知識。</strong></p>
-<h2 id="基礎寫法"><a href="#基礎寫法" class="headerlink" title="基礎寫法"></a>基礎寫法</h2><h3 id="標題"><a href="#標題" class="headerlink" title="標題"></a>標題</h3><h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># h1</span><br><span class="line">## h2</span><br><span class="line">### h3</span><br><span class="line">#### h4</span><br><span class="line"></span><br><span class="line">h1</span><br><span class="line">===</span><br><span class="line">h2</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="基礎寫法"><a href="#基礎寫法" class="headerlink" title="基礎寫法"></a>基礎寫法</h2><h3 id="標題"><a href="#標題" class="headerlink" title="標題"></a>標題</h3><p>最多從h1~h6。  </p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># h1</span><br><span class="line">## h2</span><br><span class="line">### h3</span><br><span class="line">#### h4</span><br><span class="line"></span><br><span class="line">h1</span><br><span class="line">===</span><br><span class="line">h2</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <h4 id="Showcase"><a href="#Showcase" class="headerlink" title="Showcase"></a>Showcase</h4><h3 id="分隔線"><a href="#分隔線" class="headerlink" title="分隔線"></a>分隔線</h3><h4 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* * *</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure>
 
 <h4 id="Showcase-1"><a href="#Showcase-1" class="headerlink" title="Showcase"></a>Showcase</h4><blockquote>
@@ -176,6 +163,20 @@
       <tags>
         <tag>markdown</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>我架設了一個Blog。</title>
+    <url>/2023/10/14/origin%20of%20blog/</url>
+    <content><![CDATA[<h3 id="創造這個網站的原因？"><a href="#創造這個網站的原因？" class="headerlink" title="創造這個網站的原因？"></a>創造這個網站的原因？</h3><p>你好，歡迎來到這個網站的起源，這是這個網站的第一篇文章<br>原本想創這個網站是為了放自己刷leetcode心得，順便練習html,css,js</p>
+<h3 id="從bootstrap到hexo"><a href="#從bootstrap到hexo" class="headerlink" title="從bootstrap到hexo"></a>從bootstrap到hexo</h3><p>於是乎，我就馬上找了個bootstrap範本開始研究，稍微改了一點東西就丟到github pages了<br>然後我就發現這樣要寫文章真的超麻煩啊!!<br>要手動去github新增新的html不說，當文章多起來的時候，重要標籤、搜尋功能都不存在，這樣到底怎麼找文章啦😭<br>於是我就開始另闢蹊徑，最終決定使用hexo來架起我的Blog</p>
+<h3 id="架好了，在此留下我的喜悅！"><a href="#架好了，在此留下我的喜悅！" class="headerlink" title="架好了，在此留下我的喜悅！"></a>架好了，在此留下我的喜悅！</h3><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;^_^ Say hello to my little friend!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="最後想說的話"><a href="#最後想說的話" class="headerlink" title="最後想說的話"></a>最後想說的話</h3><p>距離高三還有一年，我想這段時間還是能夠在這裡挺活躍的，不過當然同時也要準備好課業喔各位，不要像我一樣整天亂亂搞！<br>感謝聽我廢話到這邊~<br>希望以後也能常常相見！</p>
+<p>更瞭解我: <a href="https://google.com/">About Me</a></p>
+]]></content>
+      <categories>
+        <category>閒聊</category>
+      </categories>
   </entry>
   <entry>
     <title>【zerojudge】a010. 因數分解</title>

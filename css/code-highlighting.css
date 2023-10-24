@@ -3,6 +3,7 @@
 .gutter {
     color: var(--grey);
     user-select: none;
+    
 }
 
 .highlight .name {
@@ -14,7 +15,7 @@
 }
 
 .highlight .string {
-    color: #032f62;
+    color: rgb(149, 85, 30);
 }
 
 .highlight .symbol {
@@ -34,25 +35,48 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    .highlight .name {
+    body[data-color-scheme="auto"] .highlight .name {
         color: #7ee787;
     }
-    .highlight .attr, .highlight .meta, .highlight .meta-keyword, .highlight .attribute, .highlight .number, .highlight .selector-class {
-        color: #79c0ff
+    body[data-color-scheme="auto"] .highlight .attr, .highlight .meta, .highlight .meta-keyword, .highlight .attribute, .highlight .number, .highlight .selector-class {
+        color: #79c0ff;
     }
-    .highlight .string {
+    body[data-color-scheme="auto"] .highlight .string {
         color: #a5d6ff;
     }
-    .highlight .symbol {
+    body[data-color-scheme="auto"] .highlight .symbol {
         color: #79b8ff;
     }
-    .highlight .selector-tag {
+    body[data-color-scheme="auto"] .highlight .selector-tag {
         color: #7ee787;
     }
-    .highlight .built_in {
+    body[data-color-scheme="auto"] .highlight .built_in {
         color: #d2a8ff;
     }
-    .highlight .keyword {
+    body[data-color-scheme="auto"] .highlight .keyword {
         color: #ff7b72;
     }
+}
+
+
+body[data-color-scheme="dark"] .highlight .name {
+    color: #7ee787;
+}
+body[data-color-scheme="dark"] .highlight .attr, .highlight .meta, .highlight .meta-keyword, .highlight .attribute, .highlight .number, .highlight .selector-class {
+    color: #79c0ff;
+}
+body[data-color-scheme="dark"] .highlight .string {
+    color: #a5d6ff;
+}
+body[data-color-scheme="dark"] .highlight .symbol {
+    color: #79b8ff;
+}
+body[data-color-scheme="dark"] .highlight .selector-tag {
+    color: #7ee787;
+}
+body[data-color-scheme="dark"] .highlight .built_in {
+    color: #d2a8ff;
+}
+body[data-color-scheme="dark"] .highlight .keyword {
+    color: #ff7b72;
 }

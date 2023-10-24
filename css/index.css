@@ -1,5 +1,5 @@
 .hero {
-    height: calc(100vh - 56px);
+    height: calc(70vh - 56px);
     display: grid;
     place-items: center;
 }
@@ -11,17 +11,24 @@
 .hero .sub {
     text-transform: uppercase;
     font-size: 24px;
-    color: var(--black-4);
+    color: white;
     font-weight: 100;
     margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
     transition: font-size 0.5s;
+    filter:brightness(1);
 }
 
 .hero .large {
-    font-size: 128px;
-    color: var(--black-2);
+    font-size: 100px;
+    color: white;
     margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
     transition: font-size 0.5s;
+    filter:brightness(1);
+    
 }
 
 @media screen and (max-width: 800px) {
@@ -31,4 +38,36 @@
     .hero .large {
         font-size: 84px;
     }
+} 
+
+@media screen and (max-width: 410px) {
+    .hero .sub {
+        font-size: 16px;
+    }
+    .hero .large {
+        font-size: 60px;
+    }
+} 
+
+
+header.masthead {
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    background: no-repeat center center;
+    background-color: #6c757d;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  
+header.masthead:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #212529;
+opacity: 0.5;
 }

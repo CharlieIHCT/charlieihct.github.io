@@ -28,7 +28,7 @@ a:visited {
     text-decoration: none;
 }
 
-.container {
+.container :not(.header.masthead){
     max-width: 980px;
     margin: auto;
     padding: 0 16px;

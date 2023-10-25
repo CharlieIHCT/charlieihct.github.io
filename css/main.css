@@ -28,18 +28,20 @@ a:visited {
     text-decoration: none;
 }
 
-.container :not(.header.masthead){
+.container {
     max-width: 980px;
     margin: auto;
     padding: 0 16px;
 }
 
 .section-title {
+    max-width: 980px;
+    margin: 24px auto 24px auto;
+    padding: 0 24px;
     font-size: 32px;
     line-height: 1.125;
     font-weight: 700;
     letter-spacing: .004em;
-    margin-bottom: 24px;
     color: var(--card-title);
 }
 

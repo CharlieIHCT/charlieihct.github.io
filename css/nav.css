@@ -35,7 +35,7 @@ nav .author-icon {
     color: var(--black-2)!important;
 }
 
-    nav .title {
+nav .title {
     margin-bottom: 4.5px;
     vertical-align: text-bottom;
     font-size: 27px;
@@ -170,7 +170,7 @@ body[data-color-scheme="dark"] nav .nav-item-search {
     nav .author-icon {
         pointer-events: none;
         display: inline-block;
-        transition: transform 0.2s ease 0s, width 0s 0.2s, height 0s 0.2s, padding 0s 0.2s;
+        transition: all 0.2s;
         transition-delay: 0.6s;
     }
     nav .title {

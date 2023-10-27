@@ -56,12 +56,13 @@
 .post-list-item:hover .cover-img img,
 .post-list-item > a:focus .cover-img img {
   transform: scale(1.03);
+  background: white;
   filter: brightness(0.85);
 }
 
 .post-list-item .title {
   font-size: 24px;
-  line-height: 1.16667;
+  line-height: 1.3;
   font-weight: 700;
   letter-spacing: 0.009em;
   max-height: 70em;
@@ -166,9 +167,11 @@
 }
 
 .post-list.archives .post-list-item .cover-img {
-  height: initial;
-  min-width: 180px;
-  width: 20vw;
+  max-width: 20vw;
+  min-width: 110px;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
   border-radius: 16px;
   flex-shrink: 0;
 }

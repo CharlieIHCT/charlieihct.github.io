@@ -7,9 +7,9 @@ http://charlieihct.github.io/categories/index.html
 http://charlieihct.github.io/search/index.html
 http://charlieihct.github.io/
 http://charlieihct.github.io/tags/markdown/
-http://charlieihct.github.io/tags/python/
 http://charlieihct.github.io/tags/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/
+http://charlieihct.github.io/tags/python/
 http://charlieihct.github.io/categories/%E8%AA%9E%E6%B3%95/
-http://charlieihct.github.io/categories/%E5%88%B7%E9%A1%8C/
 http://charlieihct.github.io/categories/%E9%96%92%E8%81%8A/
+http://charlieihct.github.io/categories/%E5%88%B7%E9%A1%8C/
 http://charlieihct.github.io/categories/%E5%88%B7%E9%A1%8C/zerojudge/

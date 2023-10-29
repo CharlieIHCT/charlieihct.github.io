@@ -19,7 +19,7 @@ footer .links {
 
 footer .icon {
     display: flex;
-    justify-content: center;
+    justify-content: center!important;
 }
 
 footer .icon a{

@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Markdown全語法</title>
-    <url>/2023/10/21/markdown%20syntax/</url>
+    <title>[zerojudge] a010. 因數分解</title>
+    <url>/2023/10/17/zj%20factor/</url>
+    <content><![CDATA[<h3 id="因數分解"><a href="#因數分解" class="headerlink" title="因數分解"></a>因數分解</h3><h5 id="迭代解"><a href="#迭代解" class="headerlink" title="迭代解"></a>迭代解</h5><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">lst = []</span><br><span class="line">output = []</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">factors</span>(<span class="params">number</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, number+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> number % i == <span class="number">0</span>:</span><br><span class="line">            lst.append(i)</span><br><span class="line">            number = number // i</span><br><span class="line">            factors(number)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span> number+<span class="number">1</span> == i:</span><br><span class="line">            lst.append(number)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">factors(num)</span><br><span class="line"><span class="keyword">for</span> element <span class="keyword">in</span> <span class="built_in">sorted</span>(<span class="built_in">list</span>(<span class="built_in">set</span>(lst))):</span><br><span class="line">    power = lst.count(element)</span><br><span class="line">    <span class="keyword">if</span> power &gt; <span class="number">1</span>:</span><br><span class="line">        output.append(<span class="string">f&quot;<span class="subst">&#123;element&#125;</span>^<span class="subst">&#123;power&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        output.append(<span class="string">f&quot;<span class="subst">&#123;element&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot; * &quot;</span>.join(output))</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>刷題</category>
+        <category>zerojudge</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我架設了一個Blog。</title>
+    <url>/2023/10/14/Origin%20of%20Blog/</url>
+    <content><![CDATA[<h3 id="創造這個網站的原因？"><a href="#創造這個網站的原因？" class="headerlink" title="創造這個網站的原因？"></a>創造這個網站的原因？</h3><p>你好，歡迎來到這個網站的起源，這是這個網站的第一篇文章<br>原本想創這個網站是為了放自己刷leetcode心得，順便練習html,css,js</p>
+<h3 id="從bootstrap到hexo"><a href="#從bootstrap到hexo" class="headerlink" title="從bootstrap到hexo"></a>從bootstrap到hexo</h3><p>於是乎，我就馬上找了個bootstrap範本開始研究，稍微改了一點東西就丟到github pages了<br>然後我就發現這樣要寫文章真的超麻煩啊!!<br>要手動去github新增新的html不說，當文章多起來的時候，重要標籤、搜尋功能都不存在，這樣到底怎麼找文章啦😭<br>於是我就開始另闢蹊徑，最終決定使用hexo來架起我的Blog</p>
+<h3 id="架好了，在此留下我的喜悅！"><a href="#架好了，在此留下我的喜悅！" class="headerlink" title="架好了，在此留下我的喜悅！"></a>架好了，在此留下我的喜悅！</h3><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;^_^ Say hello to my little friend!&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="最後想說的話"><a href="#最後想說的話" class="headerlink" title="最後想說的話"></a>最後想說的話</h3><p>距離高三還有一年，我想這段時間還是能夠在這裡挺活躍的，不過當然同時也要準備好課業喔各位，不要像我一樣整天亂亂搞！<br>感謝聽我廢話到這邊~<br>希望以後也能常常相見！</p>
+<p>更瞭解我: <a href="https://google.com/">About Me</a></p>
+]]></content>
+      <categories>
+        <category>閒聊</category>
+      </categories>
+      <tags>
+        <tag>日常生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>從純文字到精美文件|10分鐘帶你看完Markdown全語法</title>
+    <url>/2023/10/21/MarkdownSyntax/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="甚麼是MarkDown"><a href="#甚麼是MarkDown" class="headerlink" title="甚麼是MarkDown?"></a>甚麼是MarkDown?</h3><p>Markdown是一種輕量級標記語言，目標很簡單，就是實現「易讀易寫」。並在不需要特殊複雜排版的情況下就能輕鬆地將內容轉換為HTML或其他格式。</p>
 <h3 id="為甚麼你該學Markdown"><a href="#為甚麼你該學Markdown" class="headerlink" title="為甚麼你該學Markdown?"></a>為甚麼你該學Markdown?</h3><p>Markdown文本在原始形式下很容易閱讀，就像一般的記事本一樣，頂多就是多了一些明顯的符號(例如星號**用於標記強調文字)。</p>
 <p>最重要的是許多平台都已經可以使用Markdown語法來撰寫留言、文件了，例如Github、Stack Overflow、甚至是Discord、Youtube、Line等等通訊、娛樂軟體都或多或少的支援Markdown。</p>
@@ -162,34 +193,6 @@
       </categories>
       <tags>
         <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我架設了一個Blog。</title>
-    <url>/2023/10/14/origin%20of%20blog/</url>
-    <content><![CDATA[<h3 id="創造這個網站的原因？"><a href="#創造這個網站的原因？" class="headerlink" title="創造這個網站的原因？"></a>創造這個網站的原因？</h3><p>你好，歡迎來到這個網站的起源，這是這個網站的第一篇文章<br>原本想創這個網站是為了放自己刷leetcode心得，順便練習html,css,js</p>
-<h3 id="從bootstrap到hexo"><a href="#從bootstrap到hexo" class="headerlink" title="從bootstrap到hexo"></a>從bootstrap到hexo</h3><p>於是乎，我就馬上找了個bootstrap範本開始研究，稍微改了一點東西就丟到github pages了<br>然後我就發現這樣要寫文章真的超麻煩啊!!<br>要手動去github新增新的html不說，當文章多起來的時候，重要標籤、搜尋功能都不存在，這樣到底怎麼找文章啦😭<br>於是我就開始另闢蹊徑，最終決定使用hexo來架起我的Blog</p>
-<h3 id="架好了，在此留下我的喜悅！"><a href="#架好了，在此留下我的喜悅！" class="headerlink" title="架好了，在此留下我的喜悅！"></a>架好了，在此留下我的喜悅！</h3><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;^_^ Say hello to my little friend!&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="最後想說的話"><a href="#最後想說的話" class="headerlink" title="最後想說的話"></a>最後想說的話</h3><p>距離高三還有一年，我想這段時間還是能夠在這裡挺活躍的，不過當然同時也要準備好課業喔各位，不要像我一樣整天亂亂搞！<br>感謝聽我廢話到這邊~<br>希望以後也能常常相見！</p>
-<p>更瞭解我: <a href="https://google.com/">About Me</a></p>
-]]></content>
-      <categories>
-        <category>閒聊</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>[zerojudge] a010. 因數分解</title>
-    <url>/2023/10/17/zerojudge/</url>
-    <content><![CDATA[<h3 id="因數分解"><a href="#因數分解" class="headerlink" title="因數分解"></a>因數分解</h3><h5 id="迭代解"><a href="#迭代解" class="headerlink" title="迭代解"></a>迭代解</h5><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">lst = []</span><br><span class="line">output = []</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">factors</span>(<span class="params">number</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, number+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> number % i == <span class="number">0</span>:</span><br><span class="line">            lst.append(i)</span><br><span class="line">            number = number // i</span><br><span class="line">            factors(number)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span> number+<span class="number">1</span> == i:</span><br><span class="line">            lst.append(number)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">factors(num)</span><br><span class="line"><span class="keyword">for</span> element <span class="keyword">in</span> <span class="built_in">sorted</span>(<span class="built_in">list</span>(<span class="built_in">set</span>(lst))):</span><br><span class="line">    power = lst.count(element)</span><br><span class="line">    <span class="keyword">if</span> power &gt; <span class="number">1</span>:</span><br><span class="line">        output.append(<span class="string">f&quot;<span class="subst">&#123;element&#125;</span>^<span class="subst">&#123;power&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        output.append(<span class="string">f&quot;<span class="subst">&#123;element&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot; * &quot;</span>.join(output))</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>刷題</category>
-        <category>zerojudge</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
       </tags>
   </entry>
 </search>

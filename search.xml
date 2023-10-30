@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>我架設了一個Blog。</title>
-    <url>/2023/10/14/Origin%20of%20Blog/</url>
+    <url>/2023/10/14/Origin_of_Blog/</url>
     <content><![CDATA[<h3 id="創造這個網站的原因？"><a href="#創造這個網站的原因？" class="headerlink" title="創造這個網站的原因？"></a>創造這個網站的原因？</h3><p>你好，歡迎來到這個網站的起源，這是這個網站的第一篇文章<br>原本想創這個網站是為了放自己刷leetcode心得，順便練習html,css,js</p>
 <h3 id="從bootstrap到hexo"><a href="#從bootstrap到hexo" class="headerlink" title="從bootstrap到hexo"></a>從bootstrap到hexo</h3><p>於是乎，我就馬上找了個bootstrap範本開始研究，稍微改了一點東西就丟到github pages了<br>然後我就發現這樣要寫文章真的超麻煩啊!!<br>要手動去github新增新的html不說，當文章多起來的時候，重要標籤、搜尋功能都不存在，這樣到底怎麼找文章啦😭<br>於是我就開始另闢蹊徑，最終決定使用hexo來架起我的Blog</p>
 <h3 id="架好了，在此留下我的喜悅！"><a href="#架好了，在此留下我的喜悅！" class="headerlink" title="架好了，在此留下我的喜悅！"></a>架好了，在此留下我的喜悅！</h3><figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;^_^ Say hello to my little friend!&quot;</span>)</span><br></pre></td></tr></table></figure>

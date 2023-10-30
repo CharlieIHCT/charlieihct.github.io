@@ -1,4 +1,4 @@
-http://charlieihct.github.io/2023/10/14/Origin%20of%20Blog/
+http://charlieihct.github.io/2023/10/14/Origin_of_Blog/
 http://charlieihct.github.io/2023/10/21/MarkdownSyntax/
 http://charlieihct.github.io/2023/10/17/zj%20factor/
 http://charlieihct.github.io/about/index.html

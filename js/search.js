@@ -24,7 +24,7 @@
                 const currentResultEl = document.createElement('article')
                 currentResultEl.classList.add('post-list-item')
                 currentResultEl.innerHTML = `
-<a href="${currentResult.url}">
+<a href="${currentResult.path}">
     <div class="content">
         ${(() => {
                         if (currentResult.categories) {

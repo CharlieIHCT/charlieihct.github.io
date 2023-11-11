@@ -4,6 +4,64 @@
   
     
     <entry>
+      <title>[APCS] 2016/03 矩陣轉換</title>
+      <link href="/2023/11/11/b965/"/>
+      <url>/2023/11/11/b965/</url>
+      
+        <content type="html"><![CDATA[<h2 id="第-2-題-矩陣轉換"><a href="#第-2-題-矩陣轉換" class="headerlink" title="第 2 題 矩陣轉換"></a>第 2 題 矩陣轉換</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=b965">題目連結</a></p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#輸入</span></span><br><span class="line">R, C, M = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split())</span><br><span class="line">matrix = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(R):</span><br><span class="line">    x = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split()))</span><br><span class="line">    matrix.append(x)</span><br><span class="line"></span><br><span class="line">moves = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split()))</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">原本的輸出經過1,0,0才得到後來的圖形</span></span><br><span class="line"><span class="string">則後來的圖形需要經過0,0,1才能得到原來的圖形</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">moves = <span class="built_in">list</span>(<span class="built_in">reversed</span>(moves))</span><br><span class="line"></span><br><span class="line"><span class="comment">#翻轉與旋轉</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">flip</span>(<span class="params">matrix</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    讀取行(橫的)，這裡直接用reversed函式就好，記得外面要加list()</span></span><br><span class="line"><span class="string">    [1, 1] -&gt; [1, 2]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    [3, 1] -&gt; [3, 1]   </span></span><br><span class="line"><span class="string">     </span></span><br><span class="line"><span class="string">    [1, 2] -&gt; [1, 1]</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">list</span>(<span class="built_in">reversed</span>(matrix))</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">rotate_left</span>(<span class="params">matrix</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    讀取列(直的)，</span></span><br><span class="line"><span class="string">    index:(0,0)(1,0)(2,0)(0,1)(1,1)(2,1)</span></span><br><span class="line"><span class="string">    [1, 2] -&gt; [1, 3, 1] -&gt; [2, 1, 1]</span></span><br><span class="line"><span class="string">            </span></span><br><span class="line"><span class="string">    [3, 1] -&gt; [2, 1, 1] -&gt; [1, 3, 1]  </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    [1, 1] -&gt;</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    temp = []</span><br><span class="line">    row = <span class="built_in">len</span>(matrix)</span><br><span class="line">    col = <span class="built_in">len</span>(matrix[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(col):</span><br><span class="line">        temp_row = []</span><br><span class="line">        <span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(row):</span><br><span class="line">            temp_row.append(matrix[k][i])</span><br><span class="line">        temp.append(temp_row)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">list</span>(<span class="built_in">reversed</span>(temp))</span><br><span class="line"></span><br><span class="line"><span class="comment">#執行moves</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(M):</span><br><span class="line">    <span class="keyword">if</span> moves[i] == <span class="number">1</span>:</span><br><span class="line">        matrix = flip(matrix)</span><br><span class="line">    <span class="keyword">elif</span> moves[i] == <span class="number">0</span>:</span><br><span class="line">        matrix = rotate_left(matrix)</span><br><span class="line"></span><br><span class="line"><span class="comment">#輸出</span></span><br><span class="line">ROW = <span class="built_in">len</span>(matrix)</span><br><span class="line">COL = <span class="built_in">len</span>(matrix[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(ROW, COL)</span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(ROW):</span><br><span class="line">    <span class="built_in">print</span>(*matrix[k])</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 刷題 </category>
+          
+          <category> apcs </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> 二維陣列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>[APCS] 2016/03 線段覆蓋長度</title>
+      <link href="/2023/11/11/b966/"/>
+      <url>/2023/11/11/b966/</url>
+      
+        <content type="html"><![CDATA[<h2 id="第-3-題-線段覆蓋長度"><a href="#第-3-題-線段覆蓋長度" class="headerlink" title="第 3 題 線段覆蓋長度"></a>第 3 題 線段覆蓋長度</h2><p><a href="https://zerojudge.tw/ShowProblem?problemid=b966">題目連結</a></p><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#輸入</span></span><br><span class="line">N = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">lines = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">    x = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split()))</span><br><span class="line">    lines.append(x)</span><br><span class="line"></span><br><span class="line"><span class="comment">#由小排到大，等等好擴張線段大小</span></span><br><span class="line">lines.sort()</span><br><span class="line"></span><br><span class="line">start = lines[<span class="number">0</span>][<span class="number">0</span>] <span class="comment">#起始線段的左邊</span></span><br><span class="line">end = lines[<span class="number">0</span>][<span class="number">1</span>] <span class="comment">#起始線段的右邊</span></span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">#判斷</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> lines:</span><br><span class="line">    left = i[<span class="number">0</span>]</span><br><span class="line">    right = i[<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">if</span> end &lt; left:<span class="comment">#沒有覆蓋到線段</span></span><br><span class="line">        <span class="comment">#計算獨立線段長度</span></span><br><span class="line">        <span class="built_in">sum</span> += end - start</span><br><span class="line">        <span class="comment">#線段轉換成一個</span></span><br><span class="line">        start = left</span><br><span class="line">        end = right</span><br><span class="line">    <span class="keyword">else</span>:<span class="comment">#覆蓋到線段</span></span><br><span class="line">        <span class="comment">#保持原有線段擴張</span></span><br><span class="line">        end = <span class="built_in">max</span>(end, right)</span><br><span class="line"></span><br><span class="line"><span class="comment">#最後剩下的那個線段記得加</span></span><br><span class="line"><span class="built_in">sum</span> += end - start</span><br><span class="line"><span class="comment">#輸出</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sum</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 刷題 </category>
+          
+          <category> apcs </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> 貪心法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>從純文字到精美文件|10分鐘帶你看完Markdown全語法</title>
       <link href="/2023/10/21/MarkdownSyntax/"/>
       <url>/2023/10/21/MarkdownSyntax/</url>
@@ -29,38 +87,11 @@
     
     
     <entry>
-      <title>[zerojudge] a010. 因數分解</title>
-      <link href="/2023/10/17/zj%20factor/"/>
-      <url>/2023/10/17/zj%20factor/</url>
-      
-        <content type="html"><![CDATA[<h3 id="因數分解"><a href="#因數分解" class="headerlink" title="因數分解"></a>因數分解</h3><h5 id="迭代解"><a href="#迭代解" class="headerlink" title="迭代解"></a>迭代解</h5><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">lst = []</span><br><span class="line">output = []</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">factors</span>(<span class="params">number</span>):</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, number+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> number % i == <span class="number">0</span>:</span><br><span class="line">            lst.append(i)</span><br><span class="line">            number = number // i</span><br><span class="line">            factors(number)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span> number+<span class="number">1</span> == i:</span><br><span class="line">            lst.append(number)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">factors(num)</span><br><span class="line"><span class="keyword">for</span> element <span class="keyword">in</span> <span class="built_in">sorted</span>(<span class="built_in">list</span>(<span class="built_in">set</span>(lst))):</span><br><span class="line">    power = lst.count(element)</span><br><span class="line">    <span class="keyword">if</span> power &gt; <span class="number">1</span>:</span><br><span class="line">        output.append(<span class="string">f&quot;<span class="subst">&#123;element&#125;</span>^<span class="subst">&#123;power&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        output.append(<span class="string">f&quot;<span class="subst">&#123;element&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot; * &quot;</span>.join(output))</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 刷題 </category>
-          
-          <category> zerojudge </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>我架設了一個Blog。</title>
       <link href="/2023/10/14/Origin_of_Blog/"/>
       <url>/2023/10/14/Origin_of_Blog/</url>
       
-        <content type="html"><![CDATA[<h3 id="創造這個網站的原因？"><a href="#創造這個網站的原因？" class="headerlink" title="創造這個網站的原因？"></a>創造這個網站的原因？</h3><p>你好，歡迎來到這個網站的起源，這是這個網站的第一篇文章<br>原本想創這個網站是為了放自己刷leetcode心得，順便練習html,css,js</p><h3 id="從bootstrap到hexo"><a href="#從bootstrap到hexo" class="headerlink" title="從bootstrap到hexo"></a>從bootstrap到hexo</h3><p>於是乎，我就馬上找了個bootstrap範本開始研究，稍微改了一點東西就丟到github pages了<br>然後我就發現這樣要寫文章真的超麻煩啊!!<br>要手動去github新增新的html不說，當文章多起來的時候，重要標籤、搜尋功能都不存在，這樣到底怎麼找文章啦😭<br>於是我就開始另闢蹊徑，最終決定使用hexo來架起我的Blog</p><h3 id="架好了，在此留下我的喜悅！"><a href="#架好了，在此留下我的喜悅！" class="headerlink" title="架好了，在此留下我的喜悅！"></a>架好了，在此留下我的喜悅！</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;^_^ Say hello to my little friend!&quot;</span>)</span><br></pre></td></tr></table></figure><h3 id="最後想說的話"><a href="#最後想說的話" class="headerlink" title="最後想說的話"></a>最後想說的話</h3><p>距離高三還有一年，我想這段時間還是能夠在這裡挺活躍的，不過當然同時也要準備好課業喔各位，不要像我一樣整天亂亂搞！<br>感謝聽我廢話到這邊~<br>希望以後也能常常相見！</p><p>更瞭解我: <a href="https://google.com/">About Me</a></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="創造這個網站的原因？"><a href="#創造這個網站的原因？" class="headerlink" title="創造這個網站的原因？"></a>創造這個網站的原因？</h3><p>你好，歡迎來到這個網站的起源，這是這個網站的第一篇文章<br>原本想創這個網站是為了放自己刷leetcode心得，順便練習html,css,js，後來想說就把一些學到的東西都丟上來，自己當筆記看以外還可以讓更多有興趣的人了解這些資訊  </p><h3 id="從bootstrap到hexo"><a href="#從bootstrap到hexo" class="headerlink" title="從bootstrap到hexo"></a>從bootstrap到hexo</h3><p>於是乎，我就馬上找了個bootstrap範本開始研究，稍微改了一點東西就丟到github pages了，<b><font color="red">然後我就發現這樣要寫文章真的超麻煩啊!!!!!! </font> </b></p><p>要手動去github新增新的html不說，當文章多起來的時候，重要標籤、搜尋功能都不存在，這樣到底怎麼找文章啦😭<br>於是我就開始另闢蹊徑，最終決定使用hexo來架起我的Blog</p><h3 id="架好了，在此留下我的喜悅！"><a href="#架好了，在此留下我的喜悅！" class="headerlink" title="架好了，在此留下我的喜悅！"></a>架好了，在此留下我的喜悅！</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;^_^ Say hello to my little friend!&quot;</span>)</span><br></pre></td></tr></table></figure><h3 id="最後想說的話"><a href="#最後想說的話" class="headerlink" title="最後想說的話"></a>最後想說的話</h3><p>距離高三還有一年，我想這段時間還是能夠在這裡挺活躍的，不過當然同時也要準備好課業喔各位，不要像我一樣整天亂亂搞！<br>感謝聽我廢話到這邊~<br>希望以後也能常常相見！</p><p>更瞭解我: <a href="https://google.com/">About Me</a></p>]]></content>
       
       
       <categories>

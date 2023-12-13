@@ -173,8 +173,8 @@
     <div class="divider"></div>
 
     <div class="content">
-        <h1 id="認識神經網路"><a href="#認識神經網路" class="headerlink" title="認識神經網路"></a>認識神經網路</h1><h2 id="神經元-Neuron"><a href="#神經元-Neuron" class="headerlink" title="神經元(Neuron)"></a>神經元(Neuron)</h2><h3 id="構造"><a href="#構造" class="headerlink" title="構造"></a>構造</h3><p><img src="/2023/12/14/DeepLearning/neuron.png" alt="neuron"></p>
-<ul>
+        <h1 id="認識神經網路"><a href="#認識神經網路" class="headerlink" title="認識神經網路"></a>認識神經網路</h1><h2 id="神經元-Neuron"><a href="#神經元-Neuron" class="headerlink" title="神經元(Neuron)"></a>神經元(Neuron)</h2><p><img src="/2023/12/14/DeepLearning/neuron.png" alt="neuron"></p>
+<h3 id="構造"><a href="#構造" class="headerlink" title="構造"></a>構造</h3><ul>
 <li>細胞本體：控管整個神經元。</li>
 <li>樹突：輸入。</li>
 <li>神經纖維：傳遞訊息，如果越常使用，此神經會的反應會越明顯。</li>
@@ -192,7 +192,7 @@
 <blockquote>
 <p>以圖像來思考，綠色為正的權重，紅色為負的權重，顏色愈亮代表與0的差距越大。神經元透過權重來計算下一層神經元所注重的圖像。而我們可以將我們所要的圖像外的權重值都改為0。如果想要確認圖形的邊，可以在外圍的偏移改為負的權重，就可以得到最大的加權總和。</p>
 </blockquote>
-<h3 id="什麼是邏輯函數-Sigmoid-Function-，這個函數有什麼特別之處"><a href="#什麼是邏輯函數-Sigmoid-Function-，這個函數有什麼特別之處" class="headerlink" title="什麼是邏輯函數(Sigmoid Function)，這個函數有什麼特別之處?"></a>什麼是邏輯函數(Sigmoid Function)，這個函數有什麼特別之處?</h3><p>我們想要計算權重的總和，加權總和可能為任意實數，但我們需要將加權總和壓縮在0<del>1之間(不包含0且不包含1)以便利用，sigmoid function(邏輯函數)就是使加權總和壓縮在0</del>1之間的工具，如圖。</p>
+<h3 id="什麼是邏輯函數-Sigmoid-Function-，這個函數有什麼特別之處"><a href="#什麼是邏輯函數-Sigmoid-Function-，這個函數有什麼特別之處" class="headerlink" title="什麼是邏輯函數(Sigmoid Function)，這個函數有什麼特別之處?"></a>什麼是邏輯函數(Sigmoid Function)，這個函數有什麼特別之處?</h3><p>我們想要計算權重的總和，加權總和可能為任意實數，但我們需要將加權總和壓縮在0到1之間(不包含0且不包含1)以便利用，sigmoid function(邏輯函數)就是使加權總和壓縮在0到1之間的工具，如圖。</p>
 <p><img src="/2023/12/14/DeepLearning/sigmoid_function.png" alt="sigmoid_function.png"></p>
 <blockquote>
 <p>眼尖的人應該有發現，方程式內的稱為激勵函數，而下文介紹的是邏輯函數，事實上，邏輯函數只是激勵函數的一種，激勵函數還有ReLU、tanh、Maxout函數等等，範圍也不僅限於0或1之間，不過那是另一個故事了</p>

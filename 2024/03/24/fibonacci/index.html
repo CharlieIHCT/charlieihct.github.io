@@ -31,11 +31,11 @@
   
   <meta property="og:type" content="article" />
   
-  <meta property="og:url" content="https://charlieihct.github.io/2023/12/16/fibonacci/index.html" />
+  <meta property="og:url" content="https://charlieihct.github.io/2024/03/24/fibonacci/index.html" />
   
   <meta property="og:image" content="/theme-img/leetcode.webp" />
   
-  <meta property="og:article:published_time" content="2023-12-16T12:01:10.000Z" />
+  <meta property="og:article:published_time" content="2024-03-24T03:57:10.000Z" />
   
   <meta property="og:article:author" content="IHCT" />
   
@@ -165,9 +165,9 @@
 
         
         <div class="date" id="date">
-            <span>December</span>
-            <span>16,</span>
-            <span>2023</span>
+            <span>March</span>
+            <span>24,</span>
+            <span>2024</span>
         </div>
         
 
@@ -184,7 +184,7 @@
 <h2 id="遞迴解-Recursion"><a href="#遞迴解-Recursion" class="headerlink" title="遞迴解 Recursion"></a><strong>遞迴解 Recursion</strong></h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fib</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> n</span><br><span class="line">        <span class="keyword">return</span> self.fib(n-<span class="number">1</span>) + self.fib(n-<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 
 <p>因為是遞迴解，每次都要重複call自己的function好幾次，並且透過觀察就可以知道，以n&#x3D;5為舉例，fib(3)會被call兩次，所以速度當然非常慢。要遞迴兩個函數，每次都要重複兩個子funciton，所以時間複雜度為**O(2^n)<strong>，空間複雜度為</strong>O(n)**。</p>
-<p><img src="/2023/12/16/fibonacci/Untitled.png" alt="leetcode遞迴解"></p>
+<p><img src="/2024/03/24/fibonacci/Untitled.png" alt="leetcode遞迴解"></p>
 <p><strong>DP解 Dynamic Programming</strong></p>
 <p>動態編程的目的就是<strong>用空間換取時間</strong>，只要每次運算完先把數值記憶起來，下一ˊ次計算再把數值出來就好，這樣就可以省下call function的時間！</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fib</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> n</span><br><span class="line">        table = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">9999</span>)]</span><br><span class="line">        table[<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, n+<span class="number">1</span>):</span><br><span class="line">            table[i] = table[i-<span class="number">1</span>] + table[i-<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> table[n]</span><br></pre></td></tr></table></figure>
@@ -222,22 +222,13 @@
     
 
     <div class="container post-prev-next">
+        <a class="next"></a>
         
-        <a href="/2024/02/02/MineSweeper/" class="next">
-            <div>
-                <div class="text">
-                    <p class="label">Next</p>
-                    <h3 class="title">MineSweeper踩地雷|python超簡單教學#1</h3>
-                </div>
-            </div>
-        </a>
-        
-        
-        <a href="/2023/12/16/leetcode-two-sum/" class="prev">
+        <a href="/2024/02/02/MineSweeper/" class="prev">
             <div>
                 <div class="text">
                     <p class="label">Previous</p>
-                    <h3 class="title">LeetCode 1. two-sum</>
+                    <h3 class="title">MineSweeper踩地雷|python超簡單教學#1</>
                 </div>
             </div>
         </a>
